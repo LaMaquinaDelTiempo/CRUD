@@ -1,5 +1,8 @@
 "use strict";
-const nombre = "Diego";
-const apellido = "Hernandez";
-const nombreApellido = (nombre, apellido) => nombre + apellido;
-console.log(nombreApellido(nombre, apellido));
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const server_1 = __importDefault(require("./models/server"));
+const server = new server_1.default();
+server.listen();

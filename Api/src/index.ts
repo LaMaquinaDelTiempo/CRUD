@@ -1,4 +1,5 @@
-const nombre:string="Diego";
-const apellido="Hernandez";
-const nombreApellido =(nombre:string,apellido:string)=>nombre+apellido;
-console.log(nombreApellido(nombre,apellido));
+import Server from "./models/server";
+
+
+const server=new Server();
+server.listen();
