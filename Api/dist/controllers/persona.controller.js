@@ -27,9 +27,8 @@ const deletePersona = (req, res) => {
 exports.deletePersona = deletePersona;
 const postPersona = (req, res) => {
     console.log(req.body);
-    const { id } = req.params;
     res.json({
-        msg: "deletPersona",
+        msg: "postPersona",
         body: req.body
     });
 };

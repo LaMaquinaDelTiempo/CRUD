@@ -6,4 +6,5 @@ const router = (0, express_1.Router)();
 router.get('/', persona_controller_1.getPersonas);
 router.get('/:id', persona_controller_1.getPersona);
 router.delete('/:id', persona_controller_1.deletePersona);
+router.post('/', persona_controller_1.postPersona);
 exports.default = router;

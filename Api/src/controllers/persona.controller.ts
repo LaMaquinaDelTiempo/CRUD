@@ -28,9 +28,9 @@ export const deletePersona=(req: Request,res:Response)=>{
 export const postPersona=(req: Request,res:Response)=>{
 
     console.log(req.body);
-    const {id}=req.params
+    
     res.json({
-        msg:"deletPersona",
+        msg:"postPersona",
         body: req.body
 })
 }
