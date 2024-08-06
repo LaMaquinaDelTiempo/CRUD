@@ -10,9 +10,27 @@ res.json({
 export const getPersona=(req: Request,res:Response)=>{
 
     console.log(req.params.id)
-    
+    const {id}=req.params
     res.json({
         msg:"getPersona",
-        id: req.params.id
+        id: id
+})
+}
+export const deletePersona=(req: Request,res:Response)=>{
+
+    console.log(req.params.id)
+    const {id}=req.params
+    res.json({
+        msg:"deletePersona",
+        id: id
+})
+}
+export const postPersona=(req: Request,res:Response)=>{
+
+    console.log(req.body);
+    const {id}=req.params
+    res.json({
+        msg:"deletPersona",
+        body: req.body
 })
 }

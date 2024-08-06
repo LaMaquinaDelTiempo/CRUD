@@ -5,4 +5,5 @@ const persona_controller_1 = require("../controllers/persona.controller");
 const router = (0, express_1.Router)();
 router.get('/', persona_controller_1.getPersonas);
 router.get('/:id', persona_controller_1.getPersona);
+router.delete('/:id', persona_controller_1.deletePersona);
 exports.default = router;

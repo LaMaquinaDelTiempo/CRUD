@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getPersona = exports.getPersonas = void 0;
+exports.postPersona = exports.deletePersona = exports.getPersona = exports.getPersonas = void 0;
 const getPersonas = (req, res) => {
     res.json({
         msg: "getPersonas",
@@ -9,9 +9,28 @@ const getPersonas = (req, res) => {
 exports.getPersonas = getPersonas;
 const getPersona = (req, res) => {
     console.log(req.params.id);
+    const { id } = req.params;
     res.json({
         msg: "getPersona",
-        id: req.params.id
+        id: id
     });
 };
 exports.getPersona = getPersona;
+const deletePersona = (req, res) => {
+    console.log(req.params.id);
+    const { id } = req.params;
+    res.json({
+        msg: "deletePersona",
+        id: id
+    });
+};
+exports.deletePersona = deletePersona;
+const postPersona = (req, res) => {
+    console.log(req.body);
+    const { id } = req.params;
+    res.json({
+        msg: "deletPersona",
+        body: req.body
+    });
+};
+exports.postPersona = postPersona;
