@@ -28,9 +28,22 @@ export const deletePersona=(req: Request,res:Response)=>{
 export const postPersona=(req: Request,res:Response)=>{
 
     console.log(req.body);
+    const {body}= req;
     
     res.json({
         msg:"postPersona",
-        body: req.body
+        body: body
+})
+}
+export const putPersona=(req: Request,res:Response)=>{
+
+    console.log(req.body);
+    const {body}= req;
+    const { id } = req.params;
+    
+    res.json({
+        msg:"putPersona",
+        body: body,
+        id:id,
 })
 }

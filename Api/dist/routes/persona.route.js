@@ -7,4 +7,5 @@ router.get('/', persona_controller_1.getPersonas);
 router.get('/:id', persona_controller_1.getPersona);
 router.delete('/:id', persona_controller_1.deletePersona);
 router.post('/', persona_controller_1.postPersona);
+router.put('/:id', persona_controller_1.putPersona);
 exports.default = router;
