@@ -7,6 +7,7 @@ class server{
     constructor(){
         this.app=express();
         this.port=process.env.PORT||'4000';
+        this.middlewares();
         this.routes();
 
     }
@@ -15,6 +16,10 @@ class server{
             console.log('aplicacion corriendo en el puerto', this.port);
             
         })
+    }
+    middlewares(){
+        //parseo del body
+        this.app.use(express.json())
     }
 
     routes(){

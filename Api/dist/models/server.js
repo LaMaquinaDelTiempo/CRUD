@@ -9,12 +9,17 @@ class server {
     constructor() {
         this.app = (0, express_1.default)();
         this.port = process.env.PORT || '4000';
+        this.middlewares();
         this.routes();
     }
     listen() {
         this.app.listen(this.port, () => {
             console.log('aplicacion corriendo en el puerto', this.port);
         });
+    }
+    middlewares() {
+        //parseo del body
+        this.app.use(express_1.default.json());
     }
     routes() {
         this.app.use('/api/personas', persona_route_1.default);
